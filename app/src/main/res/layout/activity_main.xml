@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:background="@android:color/darker_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_surfaceview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:id="@+id/rl_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <View
+            android:layout_alignParentRight="true"
+            android:background="@android:color/darker_gray"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/bound"
+            android:id="@+id/v_scan"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <RelativeLayout
+            android:paddingBottom="10dp"
+            android:id="@+id/rl_take"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/v_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginLeft="20dp"
+                android:text="拍照"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_take_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:src="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/rl_take"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_pic"
+            android:background="@android:color/darker_gray"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_show_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <Button
+        android:text="大图开关"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
